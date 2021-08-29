@@ -23,12 +23,13 @@ public class UserService {
   }
 
   // PUT
-  public User updateUser(User newUser) {
-    User user = getUserById(newUser.getId());
-    user.setName(newUser.getName());
-    user.setUsername(newUser.getUsername());
-    user.setEmail(newUser.getEmail());
-    user.setPassword(newUser.getPassword());
+  public User updateUser(User updatedUser) {
+    User user = getUserById(updatedUser.getId());
+    User prevUser = getUserById(updatedUser.getId());
+    user.setName(updatedUser.getName() == null ? prevUser.getName() : updatedUser.getName());
+    user.setUsername(updatedUser.getUsername() == null ? prevUser.getUsername() : updatedUser.getUsername());
+    user.setEmail(updatedUser.getEmail() == null ? prevUser.getEmail() : updatedUser.getEmail());
+    user.setPassword(updatedUser.getPassword() == null ? prevUser.getPassword() : updatedUser.getPassword());
     repo.save(user);
     return user;
   }
