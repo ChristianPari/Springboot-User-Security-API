@@ -29,6 +29,7 @@ public class UserService {
     user.setUsername(newUser.getUsername());
     user.setEmail(newUser.getEmail());
     user.setPassword(newUser.getPassword());
+    repo.save(user);
     return user;
   }
 
