@@ -19,4 +19,15 @@ This API project was mainly used to learn about adding a type security and level
 
 
 ## Things I Learned
+- Learned how to incorporate JWT into requests for Users
+  - JWT validation with error handling and logging
+  - Parsing and extracting data from the JWT
+  - Building a JWT
+- Working with Web Security and Configuration
+  - Password encrypting
+  - Authentication managing
+- Cors Configuring for Request Mapping
 
+
+# In The End
+This project was A LOT for me, theres so much to break down and understand and I know I am nowhere near knowing everything possible but getting the practice and time spent on these backend processes.
